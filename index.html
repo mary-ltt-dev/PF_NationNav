@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NationNav</title> 
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Header Navigation -->
+    <div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>  
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="search-box">
+            <input type="text" id="country-name" placeholder="Enter a country name..." />
+            <button id="search-button">Search</button>
+        </div>
+        <br><br>
+        <div id="result">
+            <div id="capital"></div>
+            <div id="currency"></div>
+            <div id="language"></div>
+            <div id="population"></div>
+            <div id="region"></div>
+            <div id="weather"></div>
+            <div id="seeMore">
+                <a href="#" target="_blank">See more...</a>
+            </div>                          
+        </div>
+    </div>
+
+    <!-- Quiz (Initially Hidden) -->
+    <div id="quiz-container" class="quiz-container" style="display: none;">
+        <h1 class="quiz-header">Quiz</h1>
+            <!-- Question 1 -->
+            <div class="question">
+                <p>What is Germany's currency?</p>
+                <label><input type="radio" name="q1" value="A"> Euro</label><br>
+                <label><input type="radio" name="q1" value="B"> Dollar</label><br>
+                <label><input type="radio" name="q1" value="C"> Pound</label><br>
+                <button type="button" onclick="submitQ1()">Submit</button>
+                <div id="resultQ1" class="resultQ1"></div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question" id="Q2">
+                <p>Ho Chi Minh City is the capital of Vietnam. True or False?</p>
+                <label><input type="radio" name="q2" value="true"> True</label><br>
+                <label><input type="radio" name="q2" value="false"> False</label><br>
+                <button type="button" onclick="submitQ2()">Submit</button><br>
+                <div id="resultQ2" class="resultQ2"></div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <p>How many official languages are there in Singapore?</p>
+                <label><input type="radio" name="q3" value="A"> 2</label><br>
+                <label><input type="radio" name="q3" value="B"> 4</label><br>
+                <label><input type="radio" name="q3" value="C"> 3</label><br>
+                <button type="button" onclick="submitQ3()">Submit</button>
+                <div id="resultQ3" class="resultQ3"></div>
+            </div>
+        </form>
+    </div>
+</div>
+    <script src="script.js" defer></script>
+</body>
+<!-- Footer with Subscribe Box -->
+<footer>
+    <div class="subscribe-box">
+        <input type="email" name="email" id="email" placeholder="Enter your email" required />
+        <button type="submit" class="subscribe-button">Subscribe</button>
+    </div>
+</footer>
+
+</html>

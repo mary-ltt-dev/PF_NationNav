@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Reset some default styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styles */
+html, body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('img.jpg'); /* Add your image here */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    justify-content: center; /* Ensures body content is centered */
+    align-items: center; /* Centers content horizontally */
+}
+
+/* Header Styles */
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 6%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.6); /* Add semi-transparent background for better visibility */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Main Content Container */
+.container {
+    background-color: white;
+    padding: 2em;
+    width: 80vw;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 1em 1.2em rgb(233, 228, 228);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 1em; 
+    text-align: center;
+    margin-top: 280px;
+}
+
+/* Search Box Styles */
+.search-box {
+    display: grid;
+    grid-template-columns: 15fr 3fr;
+    gap: 1.5em;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.search-box input {
+    font-size: 14px;
+    padding: 0.5em;
+    border: none;
+    border-bottom: 2px solid rgb(53, 76, 178);
+    outline: none;
+    width: 100%;  /* Make sure the input takes full width of its grid area */
+}
+
+.search-box button {
+    font-size: 14px;
+    background-color: rgb(75, 123, 213);
+    color: white;
+    padding: 0.8em 1.5em;  /* Increase horizontal padding for width */
+    border: none;
+    border-radius: 1em;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: #202ea7;
+    transform: scale(1.05);
+}
+
+/* Results Container (Left-aligned) */
+#result {
+    align-self: flex-start; /* Align result to the left of the container */
+    text-align: left; /* Align text to the left */
+    width: 100%; /* Ensure it takes the full width */
+    padding: 10px;
+    margin-top: 0; /* Ensure no extra margin from the top */
+}
+
+/* Result Styles */
+#capital, #currency, #language, #population, #region, #weather {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#seeMore {
+    font-size: 14px;
+    display: none !important;  /* Initially hide the "See more..." link */
+    margin-top: 10px;
+    text-align: left;
+}
+
+#seeMore.show {
+    display: block !important;  /* Force display block when we want to show it */
+}
+
+#seeMore a {
+    display: inline-block; /* Change to inline-block or block so the link is visible */
+    color: rgb(75, 123, 213);
+    text-decoration: none;
+}
+
+#seeMore a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333030;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100vw;  /* Make the footer take up the full viewport width */
+    position: relative;  /* Ensure it stays at the bottom */
+    left: 0;  /* Position it at the very left edge of the page */
+    bottom: 0;  /* Align it to the bottom of the page */
+    margin-top: auto;  /* Keeps footer at the bottom if there is space above it */
+}
+
+/* Subscribe box container with Flexbox */
+.subscribe-box {
+    display: flex;  /* Flexbox container for horizontal alignment */
+    justify-content: center;  /* Centers items horizontally */
+    align-items: center;  /* Ensures input and button are vertically aligned */
+    gap: 10px;  /* Adds space between the input and button */
+    width: 100%;  /* Takes full width of the parent container */
+    max-width: 600px;  /* Optional: limits the max width of the subscribe box */
+    margin: 0 auto;  /* Centers the subscribe box horizontally */
+}
+
+/* Input styling */
+input[type="email"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;  /* Makes input take up available space */
+    max-width: 300px;  /* Limits the maximum width of the input */
+    height: 40px;  /* Fixed height to match the button */
+    box-sizing: border-box;  /* Ensures padding is included in height calculation */
+    display: inline-flex;  /* Ensures the input stays in line with the button */
+    align-items: center;  /* Centers content vertically */
+    vertical-align: middle;  /* Vertically aligns input with the button */
+}
+
+/* Subscribe button styling */
+.subscribe-button {
+    padding: 0 20px;  /* Horizontal padding to ensure consistent width */
+    font-size: 14px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 40px;  /* Matches the input height */
+    display: inline-flex;  /* Ensures the button stays in line with the input */
+    align-items: center;  /* Centers the text vertically inside the button */
+    justify-content: center;  /* Centers the text horizontally inside the button */
+    min-width: 120px;  /* Minimum width to ensure it's not too small */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    vertical-align: middle;  /* Ensures button aligns vertically with the input */
+}
+
+/* Hover effect for subscribe button */
+.subscribe-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    .search-box {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .subscribe-box {
+        flex-direction: column;
+    }
+
+    input[type="email"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .subscribe-button {
+        width: 100%;
+    }
+}
+
+
+
+/* Quiz Section (Visible by default, center below search) */
+.quiz-header{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.quiz-container {
+    font-size: 14px;
+    width: 100%;  /* Full width within the container */
+    max-width: 600px;  /* Limit the maximum width */
+    margin-top: 400px;  /* Space between the search box and quiz */
+    padding: 20px;
+    background-color: #f9f9f9;  /* Light background for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow effect */
+    text-align: left;  /* Center text */
+    margin-left: auto;  /* Center horizontally */
+    margin-right: auto;  /* Center horizontally */
+    margin-bottom: 100px;
+    line-height: 1.6; 
+}
+
+/* Style for quiz questions (increased line height) */
+.quiz-question p, .quiz-question h3 {
+    margin-bottom: 20px;
+    line-height: 1.6;  /* Adjust space between lines of the question text */
+}
+
+/* Style for radio button labels with adjusted line height */
+.quiz-question label {
+    display: block;
+    margin-bottom: 10px;  /* Space between each answer option */
+    text-align: left;
+    line-height: 1.5;  /* Adjust line height between answer options */
+}
+
+/* Style for the button */
+button {
+    padding: 10px 20px;
+    background-color: #1983e6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* Hover effect for the button */
+button:hover {
+    background-color: #0e48ad;
+}
+
+/* Style for the result text */
+#resultQ1, #resultQ2, #resultQ3 {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.5;  /* Adjust space between result text lines */
+}
