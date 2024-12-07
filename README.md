@@ -6,14 +6,14 @@ Project name: Are you smarter than a country maniac?
 Are You Smarter Than a Country Maniac?" is an engaging, interactive educational platform designed to enhance users' geographical knowledge. This project aims to provide an educational platform for children, young adults or anyone who wants to better themselves on geographical knowledge. Users who come across this website will be able to search for various countries, and the search engine will return demographic details for the selected country.
 
 Design Process
-Through this project, I aim to create a common platform that could be accessible and easy to use for the general public, and also better myself on front-end programming, with the use of javascript, HTML, CSS and Bootstrap. 
+Through this project, I aim to create a common platform that could be accessible and easy to use for the general public, and also better myself on front-end programming, with the use of javascript, HTML and CSS. 
 
 User Stories:
-    As a user, I would like to search on my desired countries, and it will output information such as country capital, currency, language, population, region and weather.
+As a user, I would like to search on my desired countries, and it will output information such as country capital, currency, language, population, region and weather.
 
-    As a user, I would like to participate in an enriching quiz with multiple-choice questions, so that I can test my knowledge on various topics and see my results.
+As a user, I would like to participate in an enriching quiz with multiple-choice questions, so that I can test my knowledge on various topics and see my results.
 
-    As a user,  a user accessing the website from a mobile device, I want the quiz to be responsive and easy to navigate on smaller screens, so that I can take the quiz comfortably and with properly sized elements and controls.
+As a user,  a user accessing the website from a mobile device, I want the quiz to be responsive and easy to navigate on smaller screens, so that I can take the quiz comfortably and with properly sized elements and controls.
 
 Please refer to Figma high-fidelity prototype of the illustration of this project: 
 
